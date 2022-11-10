@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_libro">
+
+    <fragment
+        android:id="@+id/nav_libro"
+        android:name="com.librosreviewproyecto.ui.libro.LibroFragment"
+        android:label="@string/menu_libro"
+        tools:layout="@layout/fragment_libro" >
+        <action
+            android:id="@+id/action_nav_libro_to_addLibroFragment"
+            app:destination="@id/addLibroFragment" />
+        <action
+            android:id="@+id/action_nav_libro_to_updateLibroFragment"
+            app:destination="@id/updateLibroFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.librosreviewproyecto.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.librosreviewproyecto.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addLibroFragment"
+        android:name="com.librosreviewproyecto.ui.libro.AddLibroFragment"
+        android:label="@string/bt_add_libro"
+        tools:layout="@layout/fragment_add_libro" >
+        <action
+            android:id="@+id/action_addLibroFragment_to_nav_libro"
+            app:destination="@id/nav_libro" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateLibroFragment"
+        android:name="com.librosreviewproyecto.ui.libro.UpdateLibroFragment"
+        android:label="@string/bt_update_libro"
+        tools:layout="@layout/fragment_update_libro" >
+        <action
+            android:id="@+id/action_updateLibroFragment_to_nav_libro"
+            app:destination="@id/nav_libro" />
+        <argument
+            android:name="libro"
+            app:argType="com.librosreviewproyecto.model.Libro" />
+    </fragment>
+</navigation>

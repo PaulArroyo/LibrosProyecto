@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161992105195",
+    "project_id": "librosreviewproyecto",
+    "storage_bucket": "librosreviewproyecto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161992105195:android:91ac5b52220ffeffb772ae",
+        "android_client_info": {
+          "package_name": "com.librosreviewproyecto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161992105195-f3kcgjoiv4214t7tchaikb59o75qou5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSbqfW-7fUl4EFFiYvb6NbCNLgUOgiHQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161992105195-f3kcgjoiv4214t7tchaikb59o75qou5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
