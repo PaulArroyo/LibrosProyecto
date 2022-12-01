@@ -26,8 +26,12 @@
     <string name="bt_add_libro">Agregar Libro</string>
     <string name="bt_update_libro">Actualizar Libro</string>
     <string name="bt_delete_libro">Eliminar Libro</string>
+    <string name="bt_add_image_libro">Seleccionar Imágen</string>
 
     <string name="msg_si">Sí</string>
     <string name="msg_no">No</string>
+
+    <string name="msg_subiendo_imagen">Subiendo imagen</string>
+    <string name="msg_imagen">Imagen del lugar</string>
 
 </resources>

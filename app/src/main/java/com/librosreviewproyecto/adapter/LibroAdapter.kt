@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.librosreviewproyecto.databinding.LibroFilaBinding
 import com.librosreviewproyecto.model.Libro
 import com.librosreviewproyecto.ui.libro.LibroFragmentDirections
@@ -16,6 +17,11 @@ class LibroAdapter : RecyclerView.Adapter<LibroAdapter.LibroViewHolder>() {
                 itemBinding.tvNombre.text = libro.nombre
                 itemBinding.tvAutor.text = libro.autor
                 itemBinding.tvDescrip.text = libro.descrip
+
+                Glide.with(itemBinding.root.context)
+                    .load(libro.rutaImagen)
+                    .into(itemBinding.imagen)
+
                 itemBinding.vistaFila.setOnClickListener {
                     val action = LibroFragmentDirections
                         .actionNavLibroToUpdateLibroFragment(libro)

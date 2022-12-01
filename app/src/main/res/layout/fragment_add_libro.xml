@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10sp"
-    tools:context=".AddLibroFragment" >
+    tools:context=".ui.libro.AddLibroFragment" >
 
     <EditText
         android:id="@+id/etNombre"
@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/msg_nombre"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etAutor"
@@ -22,29 +23,80 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/msg_autor"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="520dp">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etDescrip"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:ems="10"
             android:hint="@string/msg_descrip"
-            android:inputType="textPersonName"
-            android:textSize="12sp"
+            android:textAlignment="viewStart"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/imagen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="top"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollHorizontally="false"
+            android:scrollbars="vertical"
+            tools:ignore="RtlCompat"
+            android:inputType="textMultiLine"/>
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="392dp"
+            android:layout_height="341dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/bt_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescrip"
+            app:srcCompat="@drawable/ic_image_libro" />
+
+        <Button
+            android:id="@+id/bt_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/SkyBlue"
+            android:text="@string/bt_add_image_libro"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imagen" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/msgMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/SkyBlue"
+        android:minHeight="48dp"
         android:text="@string/bt_add_libro" />
+
 </LinearLayout>
