@@ -66,6 +66,7 @@
             android:id="@+id/bt_photo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:backgroundTint="@color/SkyBlue"
             android:text="@string/bt_add_image_libro"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -90,13 +91,28 @@
         android:textAlignment="center"
         android:visibility="gone" />
 
-    <Button
-        android:id="@+id/btAdd"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="@color/SkyBlue"
-        android:minHeight="48dp"
-        android:text="@string/bt_add_libro" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="10sp">
+
+        <Button
+            android:id="@+id/btUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:backgroundTint="@color/SkyBlue"
+            android:text="@string/bt_update_libro" />
+
+        <Button
+            android:id="@+id/btDelete"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:backgroundTint="@color/SkyBlue"
+            android:text="@string/bt_delete_libro" />
+
+    </LinearLayout>
 
 </LinearLayout>

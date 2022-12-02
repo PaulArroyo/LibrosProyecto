@@ -41,7 +41,7 @@ class UpdateLibroFragment : Fragment() {
         binding.etDescrip.setText(args.libro.descrip)
 
         binding.btUpdate.setOnClickListener { updateLibro() }
-        binding.btDelete.setOnClickListener { deleteLibro() }
+        binding.btDelete.setOnClickListener { updateLibro() }
 
 
         return binding.root

@@ -41,7 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,13 +54,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_register" />
+            app:srcCompat="@drawable/ic_register"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
             android:id="@+id/bt_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_login" />
+            app:srcCompat="@drawable/ic_login"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 </LinearLayout>
