@@ -26,4 +26,6 @@ class LibroViewModel(application: Application) : AndroidViewModel(application) {
             libroRepository.deleteLibro(libro)
         }
     }
+
+
 }

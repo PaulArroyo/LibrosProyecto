@@ -6,6 +6,19 @@
     app:startDestination="@+id/nav_libro">
 
     <fragment
+        android:id="@+id/nav_biblioteca"
+        android:name="com.librosreviewproyecto.ui.biblioteca.BibliotecaFragment"
+        android:label="@string/menu_biblioteca"
+        tools:layout="@layout/fragment_biblioteca">
+        <action
+            android:id="@+id/action_nav_biblioteca_to_addBibliotecaFragment"
+            app:destination="@id/addBibliotecaFragment" />
+        <action
+            android:id="@+id/action_nav_biblioteca_to_updateBibliotecaFragment"
+            app:destination="@id/updateBibliotecaFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_libro"
         android:name="com.librosreviewproyecto.ui.libro.LibroFragment"
         android:label="@string/menu_libro"
@@ -23,12 +36,12 @@
         android:name="com.librosreviewproyecto.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
-
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.librosreviewproyecto.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
     <fragment
         android:id="@+id/addLibroFragment"
         android:name="com.librosreviewproyecto.ui.libro.AddLibroFragment"
@@ -50,4 +63,27 @@
             android:name="libro"
             app:argType="com.librosreviewproyecto.model.Libro" />
     </fragment>
+
+    <fragment
+        android:id="@+id/addBibliotecaFragment"
+        android:name="com.librosreviewproyecto.ui.biblioteca.AddBibliotecaFragment"
+        android:label="@string/bt_add_biblio"
+        tools:layout="@layout/fragment_add_biblioteca">
+        <action
+            android:id="@+id/action_addBibliotecaFragment_to_nav_biblioteca"
+            app:destination="@id/nav_biblioteca" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateBibliotecaFragment"
+        android:name="com.librosreviewproyecto.ui.biblioteca.UpdateBibliotecaFragment"
+        android:label="@string/bt_update_biblio"
+        tools:layout="">
+        <action
+            android:id="@+id/action_updateBibliotecaFragment_to_nav_biblioteca"
+            app:destination="@id/nav_biblioteca" />
+        <argument
+            android:name="biblioteca"
+            app:argType="com.librosreviewproyecto.model.Biblioteca" />
+    </fragment>
+
 </navigation>

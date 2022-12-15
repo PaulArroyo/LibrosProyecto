@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LibrosReviewProyecto</string>
+    <string name="app_name">Proyecto Libros</string>
     <string name="tv_correo">Correo</string>
     <string name="tv_clave">Contraseña</string>
     <string name="title_activity_principal">Principal</string>
@@ -11,8 +11,10 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_libro">Libros</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_biblioteca">Bibliotecas</string>
+    <string name="menu_gallery">Mapa</string>
     <string name="menu_slideshow">Slideshow</string>
+
 
     <string name="msg_nombre">Nombre del libro</string>
     <string name="msg_autor">Nombre del autor</string>
@@ -23,15 +25,43 @@
     <string name="msg_data">Faltan datos</string>
     <string name="msg_pregunta_delete">¿Está seguro de eliminar el libro </string>
 
+    <string name="msg_nombre_biblio">Nombre de la biblioteca</string>
+    <string name="msg_telefono">Telefono (9999-9999)</string>
+    <string name="msg_web">Sitio Web</string>
+    <string name="msg_biblio_added">Biblioteca agregado</string>
+    <string name="msg_biblio_updated">Biblioteca actualizada</string>
+    <string name="msg_biblio_deleted">Biblioteca eliminada</string>
+
+    <string name="msg_phone_call">Realizar llamada telefónica</string>
+    <string name="msg_whatsapp_send">Enviar mensaje WhatsApp</string>
+    <string name="msg_web_view">Abrir sitio Web</string>
+    <string name="msg_map_view">Ver lugar en mapa</string>
+    <string name="tv_latitud_lb">Latitud</string>
+    <string name="tv_longitud_lb">Longitud</string>
+    <string name="tv_altura_lb">Altura</string>
+    <string name="msg_saludos">Saludos amigos</string>
+    <string name="error">Error</string>
+
     <string name="bt_add_libro">Agregar Libro</string>
     <string name="bt_update_libro">Actualizar Libro</string>
     <string name="bt_delete_libro">Eliminar Libro</string>
     <string name="bt_add_image_libro">Seleccionar Imágen</string>
 
+    <string name="bt_add_biblio">Agregar Biblioteca</string>
+    <string name="bt_update_biblio">Actualizar Biblioteca</string>
+    <string name="bt_delete_biblio">Eliminar Biblioteca</string>
+
+
     <string name="msg_si">Sí</string>
     <string name="msg_no">No</string>
 
     <string name="msg_subiendo_imagen">Subiendo imagen</string>
+    <string name="msg_subiendo_libro">Subiendo libro</string>
+    <string name="msg_subiendo_biblioteca">Subiendo biblioteca</string>
     <string name="msg_imagen">Imagen del lugar</string>
+    <string name="msg_guardando_locacion">Guardando su ubicación</string>
+
+    <string name="google_maps_key" translatable="false">AIzaSyCa9YrdZGDPoNkAfo5GSUI1TWDJukd3gvA</string>
+
 
 </resources>

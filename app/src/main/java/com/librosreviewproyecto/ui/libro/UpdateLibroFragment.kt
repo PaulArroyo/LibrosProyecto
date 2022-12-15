@@ -1,6 +1,7 @@
 package com.librosreviewproyecto.ui.libro
 
 import android.app.AlertDialog
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.librosreviewproyecto.R
 import com.librosreviewproyecto.databinding.FragmentUpdateLibroBinding
 import com.librosreviewproyecto.model.Libro
@@ -23,9 +25,8 @@ class UpdateLibroFragment : Fragment() {
 
     private lateinit var libroViewModel: LibroViewModel
 
-    private var _binding : FragmentUpdateLibroBinding? = null
+    private var _binding: FragmentUpdateLibroBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,8 +42,14 @@ class UpdateLibroFragment : Fragment() {
         binding.etDescrip.setText(args.libro.descrip)
 
         binding.btUpdate.setOnClickListener { updateLibro() }
-        binding.btDelete.setOnClickListener { updateLibro() }
+        binding.btDelete.setOnClickListener { deleteLibro() }
 
+        if (args.libro.rutaImagen?.isNotEmpty()==true) {
+            Glide.with(requireContext())
+                .load(args.libro.rutaImagen)
+                .fitCenter()
+                .into(binding.imagen)
+        }
 
         return binding.root
     }

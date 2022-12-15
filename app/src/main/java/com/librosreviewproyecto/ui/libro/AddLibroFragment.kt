@@ -96,6 +96,7 @@ class AddLibroFragment : Fragment() {
 
 
     private fun addLibro(rutaImagen: String) {
+        binding.msgMensaje.text = getString(R.string.msg_subiendo_libro)
         val nombre = binding.etNombre.text.toString()
         if (nombre.isNotEmpty()) {
             val autor = binding.etAutor.text.toString()

@@ -1,10 +1,9 @@
-package com.librosreviewproyecto.ui.libro
+package com.librosreviewproyecto.ui.biblioteca
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -14,7 +13,7 @@ import com.librosreviewproyecto.adapter.LibroAdapter
 import com.librosreviewproyecto.databinding.FragmentLibroBinding
 import com.librosreviewproyecto.viewmodel.LibroViewModel
 
-class LibroFragment : Fragment() {
+class BibliotecaFragment : Fragment() {
 
     private var _binding: FragmentLibroBinding? = null
     private val binding get() = _binding!!

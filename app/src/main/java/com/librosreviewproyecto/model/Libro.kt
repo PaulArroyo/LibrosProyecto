@@ -11,6 +11,6 @@ data class Libro(
     val descrip : String,
     val rutaImagen : String?,
 ) : Parcelable {
-    constructor() :
-            this("","","","","")
+    constructor():
+                this("","","","","")
 }
